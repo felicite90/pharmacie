@@ -1,23 +1,21 @@
-const mongoose=require('mongoose');
-const express=require('express');
-
+import mongoose from 'mongoose';
 
 const app=require('./app');
 
+const url = 'mongodb://localhost:27017';
 const PORT = 5000;
 
-mongoose.connect('mongodb://localhost:27017/pharmacieDB').then(()=>{
-    console.log('connecter-vous sur le server'+PORT)
-     app.listen(PORT,()=>{
-     console.log('le server est lance sur le port'+PORT)
+mongoose.connect(`${url}/ecomerceDB`).then(() => {
+    console.log('Vous etes connecté à la base de données! ');
+    app.listen(PORT, () => {
+        console.log('le serveur est lancé sur le port '+ PORT)
+    })
+}).catch(error => {
+    console.log(error);
+    throw new Error("Erreur de connexion à la base de donnée!");
     
-     }).catch(error=>{
-        console.log(error);
-        throw new Error("erreur de connection sur le server") ;
-        }
-     )
-    }
-)
+})
+
 
 
 
