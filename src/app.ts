@@ -18,4 +18,5 @@ app.use('/appi/fourniseur.route',fournisseurRouter);
 app.use('/appi/commande.route',commandeRouter);
 app.use('appi/client.route',clientRouter);
 
-module.exports= app;
+module.exports = app;
+
