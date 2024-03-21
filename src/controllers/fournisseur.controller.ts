@@ -1,5 +1,6 @@
 import { Request,Response } from "express";
 import Fournisseur from "../modeles/fournisseur.model";
+
 export const ajouterFournisseur= async(req:Request , res:Response)=>{
 
     const data=req.body;
