@@ -4,9 +4,15 @@ import express from 'express';
 
 const app = express();
 
+<<<<<<< HEAD
 //const fournisseurRouter=require('./routes/fournisseur.route');
 //const commandeRouter=require('./route/commande.route');
 //const clientRouter= require('./route/client.route');
+=======
+// const fournisseurRouter=require('./routes/fournisseur.route');
+// const commandeRouter=require('./route/commande.route');
+// const clientRouter= require('./route/client.route');
+>>>>>>> aca6eb23c2dae42b413d181fa4c15e887ade3868
 
 
 //app.use(morgan('dev'));
@@ -14,9 +20,15 @@ const app = express();
 //app.use(bodyParser.urlencoded({extended:false}));
 
 
+<<<<<<< HEAD
 //app.use('/appi/fourniseur.route',fournisseurRouter);
 //app.use('/appi/commande.route',commandeRouter);
 //app.use('appi/client.route',clientRouter);
 
 //module.exports = app;
+=======
+// app.use('/appi/fourniseur.route',fournisseurRouter);
+// app.use('/appi/commande.route',commandeRouter);
+// app.use('appi/client.route',clientRouter);
+>>>>>>> aca6eb23c2dae42b413d181fa4c15e887ade3868
 
