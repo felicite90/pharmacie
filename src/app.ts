@@ -1,34 +1,19 @@
 import express from 'express';
-//import bodyParser from 'body-parser';
-//import morgan from 'morgan';
+import bodyParser from 'body-parser';
+import morgan from 'morgan';
 
 const app = express();
 
-<<<<<<< HEAD
-//const fournisseurRouter=require('./routes/fournisseur.route');
-//const commandeRouter=require('./route/commande.route');
-//const clientRouter= require('./route/client.route');
-=======
-// const fournisseurRouter=require('./routes/fournisseur.route');
-// const commandeRouter=require('./route/commande.route');
-// const clientRouter= require('./route/client.route');
->>>>>>> aca6eb23c2dae42b413d181fa4c15e887ade3868
+const fournisseurRouter = require('./routes/fournisseur.route');
+const commandeRouter = require('./routes/commande.route');
+const clientRouter = require('./routes/client.route');
 
+app.use(morgan('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-//app.use(morgan('dev'));
-//app.use(bodyParser.json());
-//app.use(bodyParser.urlencoded({extended:false}));
+app.use('/api/fournisseur', fournisseurRouter);
+app.use('/api/commande', commandeRouter);
+app.use('/api/client', clientRouter);
 
-
-<<<<<<< HEAD
-//app.use('/appi/fourniseur.route',fournisseurRouter);
-//app.use('/appi/commande.route',commandeRouter);
-//app.use('appi/client.route',clientRouter);
-
-//module.exports = app;
-=======
-// app.use('/appi/fourniseur.route',fournisseurRouter);
-// app.use('/appi/commande.route',commandeRouter);
-// app.use('appi/client.route',clientRouter);
->>>>>>> aca6eb23c2dae42b413d181fa4c15e887ade3868
-
+export default app;

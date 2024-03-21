@@ -1,9 +1,6 @@
 const mongoose =require('mongoose');
-const express=require('express');
 
-const app=express();
-
-
+const app=require('./app')
 const PORT = 7000;
 
 mongoose.connect('mongodb://localhost:27017/pharmacieDB').then(()=>{
