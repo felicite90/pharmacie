@@ -4,8 +4,8 @@ const express=require('express');
 
 const app=express();
 
-
 const PORT = 7000;
+
 const URL_MONGO="mongodb://localhost:27017";
 
 
