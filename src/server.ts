@@ -2,9 +2,11 @@ const mongoose =require('mongoose');
 
 const app=require('./app');
 const PORT = 7000;
+const url = 'mongodb://localhost:27017';
 
-mongoose.connect('mongodb://localhost:27017/pharmacieDB').then(()=>{
-     console.log('connecter-vous sur le server' + PORT)
+
+mongoose.connect(`${url}/pharmacieDB`).then(()=>{
+     console.log('connected to database');
      app.listen(PORT, () => {
      console.log('le server est lance sur le port' + PORT)
      });
