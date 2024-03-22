@@ -3,15 +3,15 @@ import { Request,Response} from "express";
 
  export const ajouterMedicament = async(req:Request, res:Response)=>{
     const data=req.body;
-    const userData=(req as any).userData;
-    const isDescription=req.query.isDescription
+     //const userData=(req as any).erData;
+     //const isDescription=req.body.isDescription
     try{
-        userData.founisseur=userData.userId;
+        //userData.fournisseur=userData._id;
         const newMedicament = new Medicament(data);
         await newMedicament.save();
         res.status(200).json({
             message:'les medicament on ete enregistre!',
-            userData,
+            //userData,
             newMedicament
         })
     } catch (error) {
