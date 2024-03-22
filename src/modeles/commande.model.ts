@@ -1,4 +1,4 @@
-const mongoose =require ('mongoose');
+import mongoose from 'mongoose';
 
 const commandeSchema=new mongoose.Schema({
     nom:{
@@ -9,11 +9,10 @@ quantite:{
     type:Number,
     default:1,
 },
-client:{
-    type:mongoose.type.Object,
-    Ref: 'Client',
-    require:true,
-    
+client: {
+    type: mongoose.Types.ObjectId,
+    ref: 'Client',
+    require: true
 },
 createdAt:{
     type:Date,

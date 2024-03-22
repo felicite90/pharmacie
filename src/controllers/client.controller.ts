@@ -17,7 +17,8 @@ export const createClient = async (req: Request, res: Response) => {
             const newClient = new Client(data);
             await newClient.save();
             res.status(202).json({
-                message: 'Votre compte a été crée avec succés!'
+                message: 'Votre client a été crée avec succés!',
+                newClient
             })
         }
     } catch (error) {

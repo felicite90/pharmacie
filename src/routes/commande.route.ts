@@ -3,7 +3,7 @@ import *as CommandeCtlr from '../controllers/commande.controller';
 
 const commandeRouter=express.Router();
 
-commandeRouter.post('/New-Commande',CommandeCtlr.createCommande);
+commandeRouter.post('/new-Commande',CommandeCtlr.createCommande);
 
-module.exports =  commandeRouter
+module.exports = commandeRouter;
 

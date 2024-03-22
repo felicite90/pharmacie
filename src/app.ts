@@ -12,8 +12,8 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use('/api/fournisseur', fournisseurRouter);
-app.use('/api/commande', commandeRouter);
-app.use('/api/client', clientRouter);
+app.use('/appi/fournisseur', fournisseurRouter);
+app.use('/appi/commande', commandeRouter);
+app.use('/appi/client', clientRouter);
 
-export default app;
+module.exports=app;

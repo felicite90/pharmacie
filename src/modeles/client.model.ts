@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-const clientSchema = new mongoose.Schema({
+const clientSchema= new mongoose.Schema({
     nom:{
         type:String,
         require:true,
@@ -20,12 +20,7 @@ const clientSchema = new mongoose.Schema({
     email:{
         type:String,
         require:false,
-    },
-    password:{
-        type:String,
-        require:false,
     }
-
 
 })
 const Client = mongoose.model('Client', clientSchema);
