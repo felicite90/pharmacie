@@ -1,7 +1,7 @@
 import mongoose from'mongoose';
 
 const medicamentSchema=new mongoose.Schema({
-    nom:{
+    titre:{
         type:String,
         require:true,
     },
@@ -19,10 +19,26 @@ const medicamentSchema=new mongoose.Schema({
     },
     dosage:{
         type:Number,
-        default:1
+        default:0.5,
     },
+fourniseur:{
+    type:mongoose.Types.ObjectId,
+    ref:'Fournisseur',
+    require:true
+
+},
+createdAt:{
+    type:Date,
+    require:true,
+    default:Date.now,
+},
+updatedAt:{
+    type:Date,
+    reauire:true,
+    default:Date.now,
+}
     
 
 })
-const medicament=mongoose.model('Medicament',medicamentSchema);
-export default medicament
+const Medicament=mongoose.model('Medicament',medicamentSchema);
+export default Medicament
