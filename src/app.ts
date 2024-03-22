@@ -8,6 +8,7 @@ const app = express();
 const fournisseurRouter = require('./routes/fournisseur.route');
 const commandeRouter = require('./routes/commande.route');
 const clientRouter = require('./routes/client.route');
+const medicamentRouter=require('./routes/medicament.route');
 
 
 
@@ -20,5 +21,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/appi/fournisseur', fournisseurRouter);
 app.use('/appi/commande', commandeRouter);
 app.use('/appi/client', clientRouter);
+app.use('/appi/medicament', medicamentRouter)
 
 module.exports=app;
