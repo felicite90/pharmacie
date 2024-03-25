@@ -9,7 +9,9 @@ import *as ClientCtlr from "../controllers/client.controller";
  
 
  clientRouter.post('/ajouterclient',ClientCtlr.createClient);
-
+ clientRouter.get('/', ClientCtlr.getClient);
+ clientRouter.get('/:email', ClientCtlr.getClientEmail);
+ clientRouter.put('/UpdateClient', ClientCtlr.UpdateClient);
 
 
 
