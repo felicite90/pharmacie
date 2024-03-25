@@ -25,3 +25,33 @@ export const ajouterFournisseur= async(req:Request , res:Response)=>{
         });
       }
     }
+
+    //fonction afficher fournisseur
+
+    export const getFournisseur = async(req:Request, res:Response)=>{
+      try{
+        const fournisseur= await Fournisseur.find();
+        res.status(201).json({
+          message:'voici la liste des fournisseurs',
+          fournisseur
+        })
+      }catch(error) {
+        res.status(500).json({
+          message: 'error:'+Error,
+      })
+      }
+      }
+      /*export const getFournisseurs = async(req:Response, res:Response)=>{
+        try{
+          const fournisseurId = req.params.id
+          const fourniseur = await Fournisseur.findById (fournisseurId).select('-password');
+          res.status(200).json({fourniseur});
+        }catch(error) {
+          res.status(500).json({
+            message:'error:' +Error,
+          });
+        }
+      }
+      */
+
+  
